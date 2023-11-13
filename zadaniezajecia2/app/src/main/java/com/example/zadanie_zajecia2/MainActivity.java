@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         TextView password =(TextView) findViewById(R.id.password);
 
         MaterialButton loginbtn = (MaterialButton) findViewById(R.id.loginbtn);
+        MaterialButton registerbtn = (MaterialButton) findViewById(R.id.registerbtn);
 
         //admin and admin
 
@@ -40,5 +41,13 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this,"LOGIN FAILED !!!",Toast.LENGTH_SHORT).show();
             }
         });
-   }
-}
+
+        registerbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    Intent explicitIntent = new Intent(getApplicationContext(), MainActivity4.class);
+                    startActivity(explicitIntent);
+
+        }});
+
+}}
