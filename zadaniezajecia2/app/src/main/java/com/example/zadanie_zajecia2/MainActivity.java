@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         restartbnt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent explicitIntent = new Intent(getApplicationContext(), MainActivity4.class);
+                Intent explicitIntent = new Intent(getApplicationContext(), MainActivity5.class);
                 startActivity(explicitIntent);
             }
         });
