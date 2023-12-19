@@ -15,15 +15,12 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity4 extends AppCompatActivity {
 
-    // Declare Firebase authentication instance
     private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
-
-        // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
         EditText emailEditText = findViewById(R.id.mail);
