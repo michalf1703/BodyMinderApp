@@ -95,6 +95,43 @@
         android:backgroundTint="@color/design_default_color_secondary"
         android:text="REGISTER" />
 
+    <TextView
+
+        android:layout_width="401dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="380dp"
+        android:gravity="right"
+        android:text="Do not you remember "
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        tools:ignore="TextSizeCheck" />
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="401dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="400dp"
+        android:gravity="right"
+        android:text="the password?         "
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        tools:ignore="TextSizeCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/restartbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text4"
+        android:layout_marginStart="270dp"
+        android:layout_marginTop="-130dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:text="RESTART" />
 
 
 </RelativeLayout>

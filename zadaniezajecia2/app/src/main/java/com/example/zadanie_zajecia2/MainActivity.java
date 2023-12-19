@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         MaterialButton loginbtn = findViewById(R.id.loginbtn);
         MaterialButton registerbtn = findViewById(R.id.registerbtn);
+        MaterialButton restartbnt = findViewById(R.id.restartbtn);
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +51,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
         registerbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent explicitIntent = new Intent(getApplicationContext(), MainActivity4.class);
+                startActivity(explicitIntent);
+            }
+        });
+
+        restartbnt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent explicitIntent = new Intent(getApplicationContext(), MainActivity4.class);
