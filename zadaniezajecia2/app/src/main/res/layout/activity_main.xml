@@ -23,7 +23,7 @@
         android:id="@+id/username"
         android:layout_below="@id/signin"
         android:background="#95C6ED"
-        android:hint="Username"
+        android:hint="E-mail"
         android:textColorHint="@color/black"
         android:textColor="@color/black"
         android:layout_margin="10dp"
