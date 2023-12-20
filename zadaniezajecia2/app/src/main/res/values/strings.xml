@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">zadanie-zajecia2</string>
+    <string-array name="activity_levels">
+        <item>Lack of activity</item>
+        <item>Light activity</item>
+        <item>Average activity</item>
+        <item>Large activity</item>
+    </string-array>
 </resources>

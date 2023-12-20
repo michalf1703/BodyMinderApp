@@ -10,7 +10,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.zadanie_zajecia2.R;
 
 public class MainActivity3 extends AppCompatActivity {
 
@@ -43,46 +42,36 @@ public class MainActivity3 extends AppCompatActivity {
     }
 
     private void calculateBMI() {
-        // Pobierz wartości wprowadzone przez użytkownika
         boolean isMale = checkBox1.isChecked();
         boolean isFemale = checkBox2.isChecked();
         int age = agePicker.getValue();
         double weight = Double.parseDouble(weightEditText.getText().toString());
         double height = Double.parseDouble(heightEditText.getText().toString());
-
-        // Wykonaj obliczenia BMI
         double bmi = calculateBMIValue(weight, height);
-        // Określ stopień BMI
         String bmiCategory = getBMICategory(bmi);
-
-        // Wyświetl wynik
         String resultMessage = "BMI: " + bmi + "\nKategoria: " + bmiCategory;
         Toast.makeText(this, resultMessage, Toast.LENGTH_SHORT).show();
 
     }
 
     private double calculateBMIValue(double weight, double heightInCm) {
-        // Przekształć wzrost z centymetrów na metry
         double heightInMeters = heightInCm / 100.0;
-
-        // Oblicz BMI
-        // Wzór BMI: BMI = masa ciała (kg) / (wzrost (m) * wzrost (m))
         return weight / (heightInMeters * heightInMeters);
     }
 
     private String getBMICategory(double bmi) {
         if (bmi < 18.5) {
-            return "Niedowaga";
+            return "Underweight";
         } else if (bmi >= 18.5 && bmi <= 24.9) {
-            return "Pożądana masa ciała";
+            return "Desired body weight";
         } else if (bmi >= 25 && bmi <= 29.9) {
-            return "Nadwaga";
+            return "Overweight";
         } else if (bmi >= 30 && bmi <= 34.9) {
-            return "Otyłość I stopnia";
+            return "Grade I obesity";
         } else if (bmi >= 35 && bmi <= 39.9) {
-            return "Otyłość II stopnia";
+            return "Grade II obesity";
         } else {
-            return "Otyłość III stopnia";
+            return "Grade III obesity";
         }
 
     }
