@@ -7,7 +7,6 @@
     android:background="@drawable/background2"
     tools:context=".MainActivity2">
 
-    <!-- Dodany TextView na górze ekranu -->
     <TextView
         android:id="@+id/userEmailTextView"
         android:layout_width="wrap_content"
@@ -22,9 +21,9 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/checkbtn"
         android:layout_width="400px"
-        android:layout_height="100px"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="260dp"
+        android:layout_height="130px"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="300dp"
         android:backgroundTint="@color/design_default_color_secondary"
         android:text="BMI" />
 

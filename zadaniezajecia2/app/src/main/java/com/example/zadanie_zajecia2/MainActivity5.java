@@ -31,11 +31,8 @@ public class MainActivity5 extends AppCompatActivity {
                 mAuth.sendPasswordResetEmail(email)
                         .addOnCompleteListener(task -> {
                             if (task.isSuccessful()) {
-                                // Password reset email sent successfully
                                 Toast.makeText(MainActivity5.this, "Password reset email sent", Toast.LENGTH_SHORT).show();
-                                // You can add additional logic here if needed
                             } else {
-                                // If sending fails, display a message to the user.
                                 Toast.makeText(MainActivity5.this, "Failed to send password reset email: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         });
