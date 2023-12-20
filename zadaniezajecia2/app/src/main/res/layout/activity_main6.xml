@@ -4,35 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background3"
-    tools:context=".MainActivity3">
-
+    android:background="@drawable/background6"
+    tools:context=".MainActivity6">
 
     <CheckBox
         android:id="@+id/checkBox1"
         android:layout_width="250dp"
         android:layout_height="48dp"
         android:layout_marginStart="130dp"
-        android:layout_marginTop="115dp"
+        android:layout_marginTop="130dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="100dp"
         android:gravity="left"
         android:text="Male"
         android:textSize="20dp" />
 
-
     <CheckBox
         android:id="@+id/checkBox2"
         android:layout_width="160dp"
         android:layout_height="48dp"
         android:layout_marginStart="230dp"
-        android:layout_marginTop="105dp"
+        android:layout_marginTop="122dp"
         android:layout_marginEnd="60dp"
         android:layout_marginBottom="60dp"
         android:text="Female"
         android:textSize="20dp" />
-
-
 
     <EditText
         android:id="@+id/weight"
@@ -64,22 +60,38 @@
         android:id="@+id/agePicker"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="476dp"
+        android:layout_marginTop="466dp"
         android:layout_marginStart="180dp"
         android:layout_gravity="center_horizontal" />
+
+    <Spinner
+        android:id="@+id/activityLevelSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/agePicker"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:entries="@array/activity_levels"
+        android:minHeight="48dp" />
+
+    <RadioGroup
+        android:id="@+id/activityLevelRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activityLevelSpinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="100dp">
+
+
+    </RadioGroup>
 
     <Button
         android:id="@+id/calculateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/agePicker"
+        android:layout_below="@id/activityLevelRadioGroup"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="-10dp"
+        android:layout_marginTop="40dp"
         android:text="Calculate" />
-
-
-
-
-
 
 </RelativeLayout>

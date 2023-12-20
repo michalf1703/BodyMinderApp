@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/tlo2"
-    tools:context=".MainActivity4">
+    tools:context=".MainActivity4"
+    tools:ignore="ExtraText">
 
 
     <TextView
@@ -49,7 +50,8 @@
         android:hint="Password"
         android:padding="20dp"
         android:textColor="@color/black"
-        android:textColorHint="@color/black" />
+        android:textColorHint="@color/black"
+        android:inputType="textPassword"/>/>
 
     <EditText
         android:id="@+id/repat_password"

@@ -22,9 +22,18 @@
         android:id="@+id/checkbtn"
         android:layout_width="400px"
         android:layout_height="130px"
-        android:layout_marginStart="46dp"
+        android:layout_marginStart="43dp"
         android:layout_marginTop="300dp"
         android:backgroundTint="@color/design_default_color_secondary"
         android:text="BMI" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/checkbtn2"
+        android:layout_width="460px"
+        android:layout_height="180px"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="294dp"
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:text="CALCULATE CALORIC"
+        android:textSize="14sp"/>
 </RelativeLayout>
