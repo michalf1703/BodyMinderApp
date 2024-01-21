@@ -25,7 +25,8 @@ public class MainActivityGymExercises extends AppCompatActivity {
         armsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.arms);
+                Intent explicitIntent = new Intent(getApplicationContext(), ArmsActivity.class);
+                startActivity(explicitIntent);
             }
         });
 
