@@ -36,4 +36,24 @@
         android:backgroundTint="@color/design_default_color_secondary"
         android:text="CALCULATE CALORIC"
         android:textSize="14sp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/checkbtn3"
+        android:layout_width="400px"
+        android:layout_height="130px"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="474dp"
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:text="EXERCISES"
+        android:textSize="14sp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/checkbtn4"
+        android:layout_width="400px"
+        android:layout_height="130px"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="474dp"
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:text="MEALS"
+        android:textSize="14sp"/>
 </RelativeLayout>

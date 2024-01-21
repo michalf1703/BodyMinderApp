@@ -21,6 +21,7 @@ public class MainActivity2 extends AppCompatActivity {
         TextView userEmailTextView = findViewById(R.id.userEmailTextView);
         MaterialButton checkBtn = findViewById(R.id.checkbtn);
         MaterialButton checkBtn2 = findViewById(R.id.checkbtn2);
+        MaterialButton checkBtn3 = findViewById(R.id.checkbtn3);
 
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
@@ -42,6 +43,14 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent explicitIntent = new Intent(getApplicationContext(), MainActivity6.class);
+                startActivity(explicitIntent);
+            }
+        });
+
+        checkBtn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent explicitIntent = new Intent(getApplicationContext(), MainActivityGymExercises.class);
                 startActivity(explicitIntent);
             }
         });
