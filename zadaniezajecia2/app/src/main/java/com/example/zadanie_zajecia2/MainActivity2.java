@@ -39,6 +39,7 @@ public class MainActivity2 extends AppCompatActivity {
         if (currentUser != null) {
             String userEmail = currentUser.getEmail();
             userEmailTextView.setText(userEmail);
+
         }
 
         databaseManager.getCaloriesForUser(new databaseManager.CaloriesCallback() {

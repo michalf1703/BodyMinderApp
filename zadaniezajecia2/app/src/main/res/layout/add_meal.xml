@@ -49,4 +49,21 @@
         android:layout_marginTop="16dp"
         android:text="Calculate caloric value"/>
 
+    <EditText
+        android:id="@+id/editCalories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editCarbs"
+        android:layout_marginTop="276dp"
+        android:hint="Calories"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:id="@+id/btnAddCalories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editFat"
+        android:layout_marginTop="276dp"
+        android:text="Add calories"/>
+
 </RelativeLayout>

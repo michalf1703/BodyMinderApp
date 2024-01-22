@@ -40,11 +40,10 @@ public class AddYourMealActivity extends AppCompatActivity {
         double protein = Double.parseDouble(editProtein.getText().toString());
         double carbs = Double.parseDouble(editCarbs.getText().toString());
         double fat = Double.parseDouble(editFat.getText().toString());
-
         double calories = (protein * 4) + (carbs * 4) + (fat * 9);
-        MyApplication myApplication = (MyApplication) getApplication();
-        myApplication.setCalories(calories);
 
         Toast.makeText(this, "Calories for " + mealName + ": " + calories, Toast.LENGTH_SHORT).show();
+
     }
+
 }

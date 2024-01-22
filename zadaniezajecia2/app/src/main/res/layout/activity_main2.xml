@@ -72,8 +72,8 @@
         android:id="@+id/checkbtn5"
         android:layout_width="470px"
         android:layout_height="180px"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="570dp"
         android:backgroundTint="@color/design_default_color_secondary"
         android:text="ADD YOUR MEAL" />
 </RelativeLayout>

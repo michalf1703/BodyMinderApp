@@ -1,6 +1,5 @@
 package database;
 
-import com.google.firebase.Firebase;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
@@ -71,6 +70,7 @@ public class databaseManager {
         private final String userId;
         private final String userEmail;
         private final double calories;
+        private double eat_calories;
 
         public User(String userId, String userEmail, double calories) {
             this.userId = userId;
