@@ -1,20 +1,96 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- arms.xml -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:padding="16dp"
+    tools:context=".ArmsActivity">
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtubePlayerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+
 
     <TextView
-        android:id="@+id/exercisesTextView"
+        android:id="@+id/textArmsExercises"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="46dp"
-        android:text="Arms exercises"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:text="Arms Exercises"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Ćwiczenie 1 -->
+    <LinearLayout
+        android:id="@+id/exercise1Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/textArmsExercises"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Biceps Exercise"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/bicepsbtnWatchVideo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Watch Video"/>
+    </LinearLayout>
+
+    <!-- Ćwiczenie 2 -->
+    <LinearLayout
+        android:id="@+id/exercise2Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/exercise1Layout"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Triceps Exercise"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/tricepsbtnWatchVideo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Watch Video"/>
+    </LinearLayout>
+
+    <!-- Ćwiczenie 3 -->
+    <LinearLayout
+        android:id="@+id/exercise3Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/exercise2Layout"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Shoulders Exercise"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/shouldersbtnWatchVideo3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Watch Video"/>
+    </LinearLayout>
 
 </RelativeLayout>

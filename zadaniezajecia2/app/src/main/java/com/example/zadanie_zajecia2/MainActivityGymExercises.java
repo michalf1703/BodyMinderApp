@@ -25,35 +25,40 @@ public class MainActivityGymExercises extends AppCompatActivity {
         armsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.arms);
+                Intent explicitIntent = new Intent(getApplicationContext(), ArmsActivity.class);
+                startActivity(explicitIntent);
             }
         });
 
         chestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.chest);
+                Intent explicitIntent = new Intent(getApplicationContext(), ChestActivity.class);
+                startActivity(explicitIntent);
             }
         });
 
         bodyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.body);
+                Intent explicitIntent = new Intent(getApplicationContext(), AbsActivity.class);
+                startActivity(explicitIntent);
             }
         });
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.back);
+                Intent explicitIntent = new Intent(getApplicationContext(), BackActivity.class);
+                startActivity(explicitIntent);
             }
         });
 
         legsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.legs);
+                Intent explicitIntent = new Intent(getApplicationContext(), LegsActivity.class);
+                startActivity(explicitIntent);
             }
         });
 

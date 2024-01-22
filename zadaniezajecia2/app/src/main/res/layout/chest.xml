@@ -1,20 +1,94 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- chest.xml -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:padding="16dp"
+    tools:context=".ChestActivity">
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtubePlayerViewChest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
 
     <TextView
-        android:id="@+id/exercisesTextView"
+        android:id="@+id/textChestExercises"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="46dp"
-        android:text="Chest exercises"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:text="Chest Exercises"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Ćwiczenie 1 -->
+    <LinearLayout
+        android:id="@+id/exercise1LayoutChest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/textChestExercises"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Lower Chest Exercise"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/lowerchestbtnWatchVideo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Watch Video" />
+    </LinearLayout>
+
+    <!-- Ćwiczenie 2 -->
+    <LinearLayout
+        android:id="@+id/exercise2LayoutChest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/exercise1LayoutChest"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Middle Chest Exercise"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/middlechestbtnWatchVideo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Watch Video" />
+    </LinearLayout>
+
+    <!-- Ćwiczenie 3 -->
+    <LinearLayout
+        android:id="@+id/exercise3LayoutChest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/exercise2LayoutChest"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Upper Chest Exercise"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/upperchestbtnWatchVideo3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Watch Video" />
+    </LinearLayout>
 
 </RelativeLayout>
