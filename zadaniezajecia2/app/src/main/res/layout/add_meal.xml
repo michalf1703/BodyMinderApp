@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/add_meal"
+    tools:context=".AddYourMealActivity">
+
+    <EditText
+        android:id="@+id/editMealName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:hint="Meal Name"/>
+
+    <EditText
+        android:id="@+id/editProtein"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editMealName"
+        android:layout_marginTop="16dp"
+        android:hint="Protein (grams)"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/editCarbs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editProtein"
+        android:layout_marginTop="16dp"
+        android:hint="Carbohydrates (grams)"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/editFat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editCarbs"
+        android:layout_marginTop="16dp"
+        android:hint="Fat (grams)"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editFat"
+        android:layout_marginTop="16dp"
+        android:text="Calculate caloric value"/>
+
+</RelativeLayout>

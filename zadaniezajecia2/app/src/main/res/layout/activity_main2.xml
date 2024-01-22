@@ -68,4 +68,12 @@
         android:layout_below="@id/checkbtn4"
         android:layout_centerHorizontal="true"/>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/checkbtn5"
+        android:layout_width="470px"
+        android:layout_height="180px"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="600dp"
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:text="ADD YOUR MEAL" />
 </RelativeLayout>
