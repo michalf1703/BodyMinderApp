@@ -41,6 +41,8 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics:21.5.0")
     implementation ("com.android.support:multidex:1.0.3")
     implementation ("com.pierfrancescosoffritti.androidyoutubeplayer:core:11.0.1")
+    implementation("com.google.firebase:firebase-database:20.3.0")
+    implementation("com.google.firebase:firebase-firestore:24.10.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")

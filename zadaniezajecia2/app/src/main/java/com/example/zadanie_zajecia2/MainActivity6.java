@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import database.databaseManager;
+
 public class MainActivity6 extends AppCompatActivity {
 
     private CheckBox checkBox1, checkBox2;
@@ -18,6 +20,8 @@ public class MainActivity6 extends AppCompatActivity {
     private NumberPicker agePicker;
     private Spinner activityLevelSpinner;
     private Button calculateButton;
+
+    private databaseManager databaseManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +39,8 @@ public class MainActivity6 extends AppCompatActivity {
         agePicker.setMinValue(1);
         agePicker.setMaxValue(100);
         agePicker.setValue(18);
+
+        databaseManager = new databaseManager();
 
         calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +68,7 @@ public class MainActivity6 extends AppCompatActivity {
 
         String resultMessage = "Total Calories: " + totalCalories;
         Toast.makeText(this, resultMessage, Toast.LENGTH_SHORT).show();
+        databaseManager.addUserCaloriesData(totalCalories);
     }
 
     private double getActivityFactor() {
