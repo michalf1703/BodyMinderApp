@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MealsPanel">
+
+    <TextView
+        android:id="@+id/mealsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="46dp"
+        android:text="Choose your type of meal"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/breakfastbtn"
+        android:layout_width="400px"
+        android:layout_height="130px"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="110dp"
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:text="Breakfast" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/dinnerbtn"
+        android:layout_width="400px"
+        android:layout_height="130px"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="220dp"
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:text="Dinner" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/lunchbtn"
+        android:layout_width="400px"
+        android:layout_height="130px"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="330dp"
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:text="Lunch" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/snacksbtn"
+        android:layout_width="400px"
+        android:layout_height="130px"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="440dp"
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:text="Snacks" />
+
+</RelativeLayout>
