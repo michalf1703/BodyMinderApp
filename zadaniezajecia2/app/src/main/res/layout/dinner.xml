@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/breakfast"
-    tools:context=".BreakfastActivity">
+    android:background="@drawable/dinner"
+    tools:context=".DinnerActivity">
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/check1btn"

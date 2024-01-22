@@ -3,7 +3,6 @@ package com.example.zadanie_zajecia2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,7 +23,18 @@ public class MealsPanel extends AppCompatActivity {
         breakfastButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.breakfast);
+
+                Intent explicitIntent = new Intent(getApplicationContext(), BreakfastActivity.class);
+                startActivity(explicitIntent);
+            }
+        });
+
+        dinnerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent explicitIntent = new Intent(getApplicationContext(), DinnerActivity.class);
+                startActivity(explicitIntent);
             }
         });
 
