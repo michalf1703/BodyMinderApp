@@ -23,7 +23,7 @@ public class DinnerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent explicitIntent = new Intent(getApplicationContext(), OmeletteActivity.class);
+                Intent explicitIntent = new Intent(getApplicationContext(), PancakesActivity.class);
                 startActivity(explicitIntent);
             }
         });
@@ -32,7 +32,7 @@ public class DinnerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent explicitIntent = new Intent(getApplicationContext(), SmoothieActivity.class);
+                Intent explicitIntent = new Intent(getApplicationContext(), TartActivity.class);
                 startActivity(explicitIntent);
             }
         });
@@ -41,7 +41,7 @@ public class DinnerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent explicitIntent = new Intent(getApplicationContext(), BakedEggActivity.class);
+                Intent explicitIntent = new Intent(getApplicationContext(), SpaghettiActivity.class);
                 startActivity(explicitIntent);
             }
         });
