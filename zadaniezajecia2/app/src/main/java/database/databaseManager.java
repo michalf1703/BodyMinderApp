@@ -33,7 +33,7 @@ public class databaseManager {
         }
     }
 
-    public void getCaloriesForUser() {
+    public void getCaloriesForUser(CaloriesCallback callback) {
         if (user != null) {
             DocumentReference userDocument = db.collection("users").document(user.getUid());
 
@@ -44,19 +44,27 @@ public class databaseManager {
 
                             if (document != null && document.exists()) {
                                 double calories = document.getDouble("calories");
+                                callback.onCaloriesReceived(calories);
                             } else {
                                 System.err.println("Dokument użytkownika nie istnieje.");
+                                callback.onCaloriesReceived(0); // Zwracamy 0 w przypadku braku dokumentu
                             }
                         } else {
                             Exception exception = task.getException();
                             if (exception != null) {
                                 exception.printStackTrace();
                             }
+                            callback.onCaloriesReceived(0); // Zwracamy 0 w przypadku błędu
                         }
                     });
         } else {
             System.err.println("Użytkownik nie jest zalogowany.");
+            callback.onCaloriesReceived(0); // Zwracamy 0 w przypadku braku zalogowanego użytkownika
         }
+    }
+
+    public interface CaloriesCallback {
+        void onCaloriesReceived(double calories);
     }
 
     public class User {
