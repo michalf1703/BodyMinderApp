@@ -11,7 +11,10 @@ import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import database.databaseManager;
+
 public class MainActivity2 extends AppCompatActivity {
+    private database.databaseManager databaseManager;
 
     private FirebaseAuth mAuth;
 
@@ -27,6 +30,9 @@ public class MainActivity2 extends AppCompatActivity {
         MaterialButton checkBtn4 = findViewById(R.id.checkbtn4);
         MaterialButton checkBtn5 = findViewById(R.id.checkbtn5);
 
+
+        databaseManager = new databaseManager();
+
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
@@ -34,6 +40,15 @@ public class MainActivity2 extends AppCompatActivity {
             String userEmail = currentUser.getEmail();
             userEmailTextView.setText(userEmail);
         }
+
+        databaseManager.getCaloriesForUser(new databaseManager.CaloriesCallback() {
+            @Override
+            public void onCaloriesReceived(double calories) {
+                // Tutaj możesz obsłużyć otrzymane dane, na przykład wyświetlić w TextView
+                TextView caloriesTextView = findViewById(R.id.caloriesConsumedTextView);
+                caloriesTextView.setText("You consumed " + " of " + (int)calories + " calories today ");
+            }
+        });
 
         checkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
