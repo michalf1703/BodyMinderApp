@@ -37,6 +37,14 @@ public class MealsPanel extends AppCompatActivity {
                 startActivity(explicitIntent);
             }
         });
+        lunchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent explicitIntent = new Intent(getApplicationContext(), LunchActivity.class);
+                startActivity(explicitIntent);
+            }
+        });
 
 
     }
