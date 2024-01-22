@@ -1,0 +1,73 @@
+<!-- back.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".BackActivity">
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtubePlayerViewBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/textBackExercises"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back Exercises"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Ćwiczenie 1 -->
+    <LinearLayout
+        android:id="@+id/exercise1LayoutBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/textBackExercises"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Lats Exercise"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/latsbackbtnWatchVideo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Watch Video" />
+    </LinearLayout>
+
+    <!-- Ćwiczenie 2 -->
+    <LinearLayout
+        android:id="@+id/exercise2LayoutBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/exercise1LayoutBack"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Traps Exercise "
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/trapsbackbtnWatchVideo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Watch Video" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<!-- abs.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".AbsActivity">
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtubePlayerViewAbs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/textAbsExercises"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ABS Exercises"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Ćwiczenie 1 -->
+    <LinearLayout
+        android:id="@+id/exercise1LayoutAbs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/textAbsExercises"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Lower ABS Exercise"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/lowerabsbtnWatchVideo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Watch Video" />
+    </LinearLayout>
+
+    <!-- Ćwiczenie 2 -->
+    <LinearLayout
+        android:id="@+id/exercise2LayoutAbs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/exercise1LayoutAbs"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Upper ABS Exercise"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/upperabsbtnWatchVideo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Watch Video" />
+    </LinearLayout>
+
+    <!-- Ćwiczenie 3 -->
+    <LinearLayout
+        android:id="@+id/exercise3LayoutAbs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/exercise2LayoutAbs"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Obliques ABS Exercise"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/obliquesabsbtnWatchVideo3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Watch Video" />
+    </LinearLayout>
+
+</RelativeLayout>

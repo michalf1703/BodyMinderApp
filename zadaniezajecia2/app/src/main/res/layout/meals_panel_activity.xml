@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/meals_panel"
+    tools:context=".MealsPanel">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/breakfastbtn"
+        android:layout_width="400px"
+        android:layout_height="130px"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="210dp"
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:text="Breakfast" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/dinnerbtn"
+        android:layout_width="400px"
+        android:layout_height="130px"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="390dp"
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:text="Dinner" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/lunchbtn"
+        android:layout_width="400px"
+        android:layout_height="130px"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="560dp"
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:text="Lunch" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/snacksbtn"
+        android:layout_width="400px"
+        android:layout_height="130px"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="755dp"
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:text="Snacks" />
+
+</RelativeLayout>
