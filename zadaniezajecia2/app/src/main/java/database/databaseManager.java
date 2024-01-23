@@ -5,18 +5,22 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.ListenerRegistration;
 
 public class databaseManager {
     private final FirebaseAuth mAuth;
     private final FirebaseUser user;
     private final FirebaseFirestore db;
+    private ListenerRegistration caloriesListener;
+    private ListenerRegistration eatenCaloriesListener;
 
     public databaseManager() {
         db = FirebaseFirestore.getInstance();
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
     }
-    public void addUserCaloriesData( double calculatedCalories) {
+
+    public void addUserCaloriesData(double calculatedCalories) {
         if (user != null) {
             db.collection("users")
                     .document(user.getUid())
@@ -31,6 +35,7 @@ public class databaseManager {
             System.err.println("Użytkownik nie jest zalogowany.");
         }
     }
+
     public void addUserEatenCaloriesData(double eatenCalories) {
         if (user != null) {
             DocumentReference userDocument = db.collection("users").document(user.getUid());
@@ -61,6 +66,7 @@ public class databaseManager {
             System.err.println("Użytkownik nie jest zalogowany.");
         }
     }
+
     public void getCaloriesForUser(CaloriesCallback callback) {
         if (user != null) {
             DocumentReference userDocument = db.collection("users").document(user.getUid());
@@ -90,6 +96,7 @@ public class databaseManager {
             callback.onCaloriesReceived(0); // Zwracamy 0 w przypadku braku zalogowanego użytkownika
         }
     }
+
     public void getEatenCaloriesForUser(CaloriesCallback callback) {
         if (user != null) {
             DocumentReference userDocument = db.collection("users").document(user.getUid());
@@ -120,10 +127,65 @@ public class databaseManager {
         }
     }
 
+    // Dodaj metody nasłuchujące zmian w czasie rzeczywistym
+    public void addCaloriesListener(CaloriesCallback callback) {
+        if (user != null) {
+            DocumentReference userDocument = db.collection("users").document(user.getUid());
+            caloriesListener = userDocument.addSnapshotListener((documentSnapshot, e) -> {
+                if (e != null) {
+                    System.err.println("Błąd podczas nasłuchiwania na zmiany kalorii: " + e.getMessage());
+                    return;
+                }
+
+                if (documentSnapshot != null && documentSnapshot.exists()) {
+                    double calories = documentSnapshot.getDouble("calories");
+                    callback.onCaloriesReceived(calories);
+                }
+            });
+        }
+    }
+
+    public void addEatenCaloriesListener(CaloriesCallback callback) {
+        if (user != null) {
+            DocumentReference userDocument = db.collection("users").document(user.getUid());
+            eatenCaloriesListener = userDocument.addSnapshotListener((documentSnapshot, e) -> {
+                if (e != null) {
+                    System.err.println("Błąd podczas nasłuchiwania na zmiany zjedzonych kalorii: " + e.getMessage());
+                    return;
+                }
+
+                if (documentSnapshot != null && documentSnapshot.exists()) {
+                    Double eatenCalories = documentSnapshot.getDouble("eat_calories");
+
+                    // Sprawdź, czy eatenCalories nie jest null przed użyciem metody doubleValue()
+                    if (eatenCalories != null) {
+                        double calories = eatenCalories.doubleValue();
+                        callback.onCaloriesReceived(calories);
+                    } else {
+                        System.err.println("Pole eat_calories w dokumencie użytkownika jest null.");
+                    }
+                }
+            });
+        }
+    }
+
+
+    // Dodaj metody usuwające nasłuchiwanie
+    public void removeCaloriesListener() {
+        if (caloriesListener != null) {
+            caloriesListener.remove();
+        }
+    }
+
+    public void removeEatenCaloriesListener() {
+        if (eatenCaloriesListener != null) {
+            eatenCaloriesListener.remove();
+        }
+    }
+
     public interface CaloriesCallback {
         void onCaloriesReceived(double calories);
     }
-
 
     public class User {
         private final String userId;
@@ -149,6 +211,7 @@ public class databaseManager {
         public double getCalories() {
             return calories;
         }
+
         public double getEatCalories() {
             return eat_calories;
         }
