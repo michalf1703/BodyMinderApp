@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="66dp"
-        android:hint="Meal Name"/>
+        android:hint="Meal Name"
+        android:contentDescription="Enter the name of the meal"/>
 
     <EditText
         android:id="@+id/editProtein"
@@ -21,7 +22,8 @@
         android:layout_below="@id/editMealName"
         android:layout_marginTop="16dp"
         android:hint="Protein (grams)"
-        android:inputType="numberDecimal"/>
+        android:inputType="numberDecimal"
+        android:contentDescription="Enter the amount of protein in grams"/>
 
     <EditText
         android:id="@+id/editCarbs"
@@ -30,7 +32,8 @@
         android:layout_below="@id/editProtein"
         android:layout_marginTop="16dp"
         android:hint="Carbohydrates (grams)"
-        android:inputType="numberDecimal"/>
+        android:inputType="numberDecimal"
+        android:contentDescription="Enter the amount of carbohydrates in grams"/>
 
     <EditText
         android:id="@+id/editFat"
@@ -39,7 +42,8 @@
         android:layout_below="@id/editCarbs"
         android:layout_marginTop="16dp"
         android:hint="Fat (grams)"
-        android:inputType="numberDecimal"/>
+        android:inputType="numberDecimal"
+        android:contentDescription="Enter the amount of fat in grams"/>
 
     <Button
         android:id="@+id/btnCalculate"
@@ -47,7 +51,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/editFat"
         android:layout_marginTop="16dp"
-        android:text="Calculate caloric value"/>
+        android:text="Calculate caloric value"
+        android:contentDescription="Button to calculate the caloric value of the meal"/>
 
     <EditText
         android:id="@+id/editCalories"
@@ -56,7 +61,8 @@
         android:layout_below="@id/editCarbs"
         android:layout_marginTop="276dp"
         android:hint="Calories"
-        android:inputType="numberDecimal"/>
+        android:inputType="numberDecimal"
+        android:contentDescription="Display or enter the total calories of the meal"/>
 
     <Button
         android:id="@+id/btnAddCalories"
@@ -64,6 +70,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/editFat"
         android:layout_marginTop="276dp"
-        android:text="Add calories"/>
-
+        android:text="Add calories"
+        android:contentDescription="Button to add calories to the meal"/>
 </RelativeLayout>

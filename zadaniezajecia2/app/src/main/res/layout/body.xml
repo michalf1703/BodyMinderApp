@@ -1,4 +1,4 @@
-<!-- abs.xml -->
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,7 +10,8 @@
         android:id="@+id/youtubePlayerViewAbs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        android:contentDescription="YouTube Player for ABS Exercises" />
 
     <TextView
         android:id="@+id/textAbsExercises"
@@ -20,7 +21,8 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Header Text: ABS Exercises" />
 
     <!-- Ćwiczenie 1 -->
     <LinearLayout
@@ -29,20 +31,23 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/textAbsExercises"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp"
+        android:contentDescription="Layout for Lower ABS Exercise">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Lower ABS Exercise"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:contentDescription="Text: Lower ABS Exercise" />
 
         <Button
             android:id="@+id/lowerabsbtnWatchVideo1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Watch Video" />
+            android:text="Watch Video"
+            android:contentDescription="Button: Watch Lower ABS Exercise Video" />
     </LinearLayout>
 
     <!-- Ćwiczenie 2 -->
@@ -52,20 +57,23 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/exercise1LayoutAbs"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="8dp"
+        android:contentDescription="Layout for Upper ABS Exercise">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Upper ABS Exercise"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:contentDescription="Text: Upper ABS Exercise" />
 
         <Button
             android:id="@+id/upperabsbtnWatchVideo2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Watch Video" />
+            android:text="Watch Video"
+            android:contentDescription="Button: Watch Upper ABS Exercise Video" />
     </LinearLayout>
 
     <!-- Ćwiczenie 3 -->
@@ -75,20 +83,23 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/exercise2LayoutAbs"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="8dp"
+        android:contentDescription="Layout for Obliques ABS Exercise">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Obliques ABS Exercise"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:contentDescription="Text: Obliques ABS Exercise" />
 
         <Button
             android:id="@+id/obliquesabsbtnWatchVideo3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Watch Video" />
+            android:text="Watch Video"
+            android:contentDescription="Button: Watch Obliques ABS Exercise Video" />
     </LinearLayout>
 
 </RelativeLayout>

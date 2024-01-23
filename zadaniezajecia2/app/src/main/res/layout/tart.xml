@@ -14,7 +14,8 @@
         android:layout_marginStart="130dp"
         android:layout_marginTop="720dp"
         android:backgroundTint="@color/design_default_color_secondary"
-        android:text="ADD TO YOUR CALORIC" />
+        android:text="ADD TO YOUR CALORIC"
+        android:contentDescription="Button to add Tart with zucchini to your caloric intake" />/>
 
 
 

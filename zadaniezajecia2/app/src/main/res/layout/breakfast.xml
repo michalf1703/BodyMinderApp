@@ -14,7 +14,8 @@
         android:layout_marginStart="240dp"
         android:layout_marginTop="200dp"
         android:backgroundTint="@color/design_default_color_secondary"
-        android:text="CHECK" />
+        android:text="CHECK"
+        android:contentDescription="Check Button for omlette" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/check2btn"
@@ -24,7 +25,8 @@
         android:layout_marginStart="240dp"
         android:layout_marginTop="180dp"
         android:backgroundTint="@color/design_default_color_secondary"
-        android:text="CHECK" />
+        android:text="CHECK"
+        android:contentDescription="Check Button for smoothie" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/check3btn"
@@ -34,7 +36,7 @@
         android:layout_marginStart="240dp"
         android:layout_marginTop="190dp"
         android:backgroundTint="@color/design_default_color_secondary"
-        android:text="CHECK" />
-
+        android:text="CHECK"
+        android:contentDescription="Check Button for baked eggs" />
 
 </RelativeLayout>

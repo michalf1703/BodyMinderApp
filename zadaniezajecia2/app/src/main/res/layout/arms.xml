@@ -10,9 +10,8 @@
         android:id="@+id/youtubePlayerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"/>
-
-
+        android:layout_centerInParent="true"
+        android:contentDescription="YouTube Player"/>
 
     <TextView
         android:id="@+id/textArmsExercises"
@@ -22,7 +21,8 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Header: Arms Exercises"/>
 
     <!-- Ćwiczenie 1 -->
     <LinearLayout
@@ -31,20 +31,23 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/textArmsExercises"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp"
+        android:contentDescription="Exercise 1: Biceps Exercise">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Biceps Exercise"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:contentDescription="Biceps Exercise description"/>
 
         <Button
             android:id="@+id/bicepsbtnWatchVideo1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Watch Video"/>
+            android:text="Watch Video"
+            android:contentDescription="Watch Video for Biceps Exercise"/>
     </LinearLayout>
 
     <!-- Ćwiczenie 2 -->
@@ -54,20 +57,23 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/exercise1Layout"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="8dp"
+        android:contentDescription="Exercise 2: Triceps Exercise">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Triceps Exercise"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:contentDescription="Triceps Exercise description"/>
 
         <Button
             android:id="@+id/tricepsbtnWatchVideo2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Watch Video"/>
+            android:text="Watch Video"
+            android:contentDescription="Watch Video for Triceps Exercise"/>
     </LinearLayout>
 
     <!-- Ćwiczenie 3 -->
@@ -77,20 +83,23 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/exercise2Layout"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="8dp"
+        android:contentDescription="Exercise 3: Shoulders Exercise">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Shoulders Exercise"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:contentDescription="Shoulders Exercise description"/>
 
         <Button
             android:id="@+id/shouldersbtnWatchVideo3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Watch Video"/>
+            android:text="Watch Video"
+            android:contentDescription="Watch Video for Shoulders Exercise"/>
     </LinearLayout>
 
 </RelativeLayout>

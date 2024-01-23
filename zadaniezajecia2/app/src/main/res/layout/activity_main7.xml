@@ -7,7 +7,6 @@
     android:background="@drawable/exercise_panel"
     tools:context=".MainActivityGymExercises">
 
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/armsbtn"
         android:layout_width="400px"
@@ -15,7 +14,8 @@
         android:layout_marginStart="230dp"
         android:layout_marginTop="110dp"
         android:backgroundTint="@color/design_default_color_secondary"
-        android:text="ARMS" />
+        android:text="ARMS"
+        android:contentDescription="Button to view arm exercises" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/chestbtn"
@@ -24,7 +24,8 @@
         android:layout_marginStart="230dp"
         android:layout_marginTop="250dp"
         android:backgroundTint="@color/design_default_color_secondary"
-        android:text="CHEST" />
+        android:text="CHEST"
+        android:contentDescription="Button to view chest exercises" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/bodybtn"
@@ -33,7 +34,8 @@
         android:layout_marginStart="230dp"
         android:layout_marginTop="390dp"
         android:backgroundTint="@color/design_default_color_secondary"
-        android:text="BODY" />
+        android:text="BODY"
+        android:contentDescription="Button to view full body exercises" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/backbtn"
@@ -42,7 +44,8 @@
         android:layout_marginStart="230dp"
         android:layout_marginTop="540dp"
         android:backgroundTint="@color/design_default_color_secondary"
-        android:text="BACK" />
+        android:text="BACK"
+        android:contentDescription="Button to view back exercises" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/legsbtn"
@@ -51,5 +54,6 @@
         android:layout_marginStart="230dp"
         android:layout_marginTop="700dp"
         android:backgroundTint="@color/design_default_color_secondary"
-        android:text="LEGS" />
+        android:text="LEGS"
+        android:contentDescription="Button to view leg exercises" />
 </RelativeLayout>
