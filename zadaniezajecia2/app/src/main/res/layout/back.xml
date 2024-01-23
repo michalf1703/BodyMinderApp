@@ -1,4 +1,4 @@
-<!-- back.xml -->
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,7 +10,8 @@
         android:id="@+id/youtubePlayerViewBack"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        android:contentDescription="YouTube Player for Back Exercises" />
 
     <TextView
         android:id="@+id/textBackExercises"
@@ -20,7 +21,8 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Header Text: Back Exercises" />
 
     <!-- Ćwiczenie 1 -->
     <LinearLayout
@@ -29,20 +31,23 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/textBackExercises"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp"
+        android:contentDescription="Layout for Lats Exercise">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Lats Exercise"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:contentDescription="Text: Lats Exercise" />
 
         <Button
             android:id="@+id/latsbackbtnWatchVideo1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Watch Video" />
+            android:text="Watch Video"
+            android:contentDescription="Button: Watch Lats Exercise Video" />
     </LinearLayout>
 
     <!-- Ćwiczenie 2 -->
@@ -52,22 +57,23 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/exercise1LayoutBack"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="8dp"
+        android:contentDescription="Layout for Traps Exercise">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Traps Exercise "
-            android:textStyle="bold" />
+            android:text="Traps Exercise"
+            android:textStyle="bold"
+            android:contentDescription="Text: Traps Exercise" />
 
         <Button
             android:id="@+id/trapsbackbtnWatchVideo2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Watch Video" />
+            android:text="Watch Video"
+            android:contentDescription="Button: Watch Traps Exercise Video" />
     </LinearLayout>
-
-
 
 </RelativeLayout>

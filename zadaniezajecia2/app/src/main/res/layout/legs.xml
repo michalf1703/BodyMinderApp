@@ -10,7 +10,8 @@
         android:id="@+id/youtubePlayerViewLegs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        android:contentDescription="Legs YouTube Player"/>
 
     <TextView
         android:id="@+id/textLegsExercises"
@@ -20,7 +21,8 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Text: Legs Exercises"/>
 
     <!-- Ćwiczenie 1 -->
     <LinearLayout
@@ -29,20 +31,23 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/textLegsExercises"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp"
+        android:contentDescription="Layout: Quads Exercise">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Quads Exercise"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:contentDescription="Text: Quads Exercise" />
 
         <Button
             android:id="@+id/quadslegsbtnWatchVideo1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Watch Video" />
+            android:text="Watch Video"
+            android:contentDescription="Button: Watch Quads Exercise Video" />
     </LinearLayout>
 
     <!-- Ćwiczenie 2 -->
@@ -52,20 +57,23 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/exercise1LayoutLegs"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="8dp"
+        android:contentDescription="Layout: Hamstrings Exercise">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Hamstrings Exercise"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:contentDescription="Text: Hamstrings Exercise" />
 
         <Button
             android:id="@+id/hamstringslegsbtnWatchVideo2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Watch Video" />
+            android:text="Watch Video"
+            android:contentDescription="Button: Watch Hamstrings Exercise Video" />
     </LinearLayout>
 
     <!-- Ćwiczenie 3 -->
@@ -75,20 +83,23 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/exercise2LayoutLegs"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="8dp"
+        android:contentDescription="Layout: Calves Exercise">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Calves Exercise"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:contentDescription="Text: Calves Exercise" />
 
         <Button
             android:id="@+id/calveslegsbtnWatchVideo3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Watch Video" />
+            android:text="Watch Video"
+            android:contentDescription="Button: Watch Calves Exercise Video" />
     </LinearLayout>
 
 </RelativeLayout>

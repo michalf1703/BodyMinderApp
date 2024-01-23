@@ -14,7 +14,8 @@
         android:layout_marginStart="150dp"
         android:layout_marginTop="210dp"
         android:backgroundTint="@color/design_default_color_secondary"
-        android:text="Breakfast" />
+        android:text="Breakfast"
+        android:contentDescription="Button: Breakfast" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/dinnerbtn"
@@ -23,7 +24,8 @@
         android:layout_marginStart="150dp"
         android:layout_marginTop="390dp"
         android:backgroundTint="@color/design_default_color_secondary"
-        android:text="Dinner" />
+        android:text="Dinner"
+        android:contentDescription="Button: Dinner" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/lunchbtn"
@@ -32,7 +34,8 @@
         android:layout_marginStart="150dp"
         android:layout_marginTop="560dp"
         android:backgroundTint="@color/design_default_color_secondary"
-        android:text="Lunch" />
+        android:text="Lunch"
+        android:contentDescription="Button: Lunch" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/snacksbtn"
@@ -41,6 +44,7 @@
         android:layout_marginStart="150dp"
         android:layout_marginTop="755dp"
         android:backgroundTint="@color/design_default_color_secondary"
-        android:text="Snacks" />
+        android:text="Snacks"
+        android:contentDescription="Button: Snacks" />
 
 </RelativeLayout>

@@ -11,6 +11,7 @@
         android:id="@+id/check1btn"
         android:layout_width="510px"
         android:layout_height="180px"
+        android:contentDescription="Button to add Avocado Toast to your caloric intake"
         android:layout_marginStart="130dp"
         android:layout_marginTop="670dp"
         android:backgroundTint="@color/design_default_color_secondary"

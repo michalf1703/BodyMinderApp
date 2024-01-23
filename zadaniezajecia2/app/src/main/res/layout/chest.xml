@@ -1,4 +1,4 @@
-<!-- chest.xml -->
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,7 +10,8 @@
         android:id="@+id/youtubePlayerViewChest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        android:contentDescription="YouTube Video Player" />
 
     <TextView
         android:id="@+id/textChestExercises"
@@ -20,7 +21,8 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Chest Exercises Header" />
 
     <!-- Ćwiczenie 1 -->
     <LinearLayout
@@ -29,20 +31,23 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/textChestExercises"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp"
+        android:contentDescription="Lower Chest Exercise Layout">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Lower Chest Exercise"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:contentDescription="Lower Chest Exercise Description" />
 
         <Button
             android:id="@+id/lowerchestbtnWatchVideo1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Watch Video" />
+            android:text="Watch Video"
+            android:contentDescription="Watch Lower Chest Exercise Video" />
     </LinearLayout>
 
     <!-- Ćwiczenie 2 -->
@@ -52,20 +57,23 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/exercise1LayoutChest"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="8dp"
+        android:contentDescription="Middle Chest Exercise Layout">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Middle Chest Exercise"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:contentDescription="Middle Chest Exercise Description" />
 
         <Button
             android:id="@+id/middlechestbtnWatchVideo2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Watch Video" />
+            android:text="Watch Video"
+            android:contentDescription="Watch Middle Chest Exercise Video" />
     </LinearLayout>
 
     <!-- Ćwiczenie 3 -->
@@ -75,20 +83,23 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/exercise2LayoutChest"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="8dp"
+        android:contentDescription="Upper Chest Exercise Layout">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Upper Chest Exercise"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:contentDescription="Upper Chest Exercise Description" />
 
         <Button
             android:id="@+id/upperchestbtnWatchVideo3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Watch Video" />
+            android:text="Watch Video"
+            android:contentDescription="Watch Upper Chest Exercise Video" />
     </LinearLayout>
 
 </RelativeLayout>
