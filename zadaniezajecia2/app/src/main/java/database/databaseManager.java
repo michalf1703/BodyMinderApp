@@ -93,6 +93,23 @@ public class databaseManager {
         }
     }
 
+    public void resetEatenCaloriesForUser() {
+        if (user != null) {
+            DocumentReference userDocument = db.collection("users").document(user.getUid());
+
+            userDocument
+                    .update("eat_calories", 0)
+                    .addOnSuccessListener(aVoid -> {
+                        System.out.println("Zresetowano zjedzone kalorie pomyślnie.");
+                    })
+                    .addOnFailureListener(e -> {
+                        System.err.println("Błąd podczas resetowania zjedzonych kalorii: " + e.getMessage());
+                    });
+        } else {
+            System.err.println("Użytkownik nie jest zalogowany.");
+        }
+    }
+
     public void getCaloriesForUser(CaloriesCallback callback) {
         if (user != null) {
             DocumentReference userDocument = db.collection("users").document(user.getUid());

@@ -115,10 +115,19 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/checkbtn5"
-        android:layout_width="470px"
+        android:layout_width="460px"
         android:layout_height="180px"
-        android:layout_marginStart="143dp"
+        android:layout_marginStart="43dp"
         android:layout_marginTop="570dp"
         android:backgroundTint="@color/design_default_color_secondary"
         android:text="ADD YOUR MEAL" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/checkbtn6"
+        android:layout_width="480px"
+        android:layout_height="240px"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="570dp"
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:text="RESET CONSUMED CALORIES" />
 </RelativeLayout>

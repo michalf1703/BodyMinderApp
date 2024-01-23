@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/tlo1"
     tools:context=".MainActivity">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,7 +16,8 @@
         android:textSize="35dp"
         android:textStyle="bold"
         android:layout_margin="50dp"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:contentDescription="Sign in title"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -28,7 +30,8 @@
         android:textColor="@color/black"
         android:layout_margin="10dp"
         android:padding="20dp"
-        android:drawablePadding="20dp"/>
+        android:drawablePadding="20dp"
+        android:contentDescription="Email input"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -42,7 +45,8 @@
         android:layout_margin="10dp"
         android:padding="20dp"
         android:drawablePadding="20dp"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword"
+        android:contentDescription="Password input"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/loginbtn"
@@ -55,10 +59,10 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/design_default_color_secondary"
-        android:text="LOGIN" />
+        android:text="LOGIN"
+        android:contentDescription="Login button"/>
 
     <TextView
-
         android:layout_width="500dp"
         android:layout_height="30dp"
         android:layout_marginStart="10dp"
@@ -68,7 +72,9 @@
         android:textColor="@color/black"
         android:textSize="15dp"
         android:textStyle="bold"
-        tools:ignore="TextSizeCheck" />
+        tools:ignore="TextSizeCheck"
+        android:contentDescription="Text about not having an account"/>
+
     <TextView
         android:id="@+id/text1"
         android:layout_width="500dp"
@@ -80,7 +86,8 @@
         android:textColor="@color/black"
         android:textSize="15dp"
         android:textStyle="bold"
-        tools:ignore="TextSizeCheck" />
+        tools:ignore="TextSizeCheck"
+        android:contentDescription="Text to register now"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/registerbtn"
@@ -91,12 +98,11 @@
         android:layout_marginTop="0dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-
         android:backgroundTint="@color/design_default_color_secondary"
-        android:text="REGISTER" />
+        android:text="REGISTER"
+        android:contentDescription="Register button"/>
 
     <TextView
-
         android:layout_width="401dp"
         android:layout_height="159dp"
         android:layout_marginStart="10dp"
@@ -106,7 +112,9 @@
         android:textColor="@color/black"
         android:textSize="15dp"
         android:textStyle="bold"
-        tools:ignore="TextSizeCheck" />
+        tools:ignore="TextSizeCheck"
+        android:contentDescription="Text about forgetting password"/>
+
     <TextView
         android:id="@+id/text4"
         android:layout_width="401dp"
@@ -118,7 +126,8 @@
         android:textColor="@color/black"
         android:textSize="15dp"
         android:textStyle="bold"
-        tools:ignore="TextSizeCheck" />
+        tools:ignore="TextSizeCheck"
+        android:contentDescription="Text about forgetting password continued"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/restartbtn"
@@ -129,9 +138,7 @@
         android:layout_marginTop="-130dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="20dp"
-
         android:backgroundTint="@color/design_default_color_secondary"
-        android:text="RESTART" />
-
-
+        android:text="RESTART"
+        android:contentDescription="Restart button"/>
 </RelativeLayout>

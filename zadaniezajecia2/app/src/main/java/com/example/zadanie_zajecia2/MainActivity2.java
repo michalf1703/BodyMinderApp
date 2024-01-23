@@ -11,6 +11,8 @@ import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.text.DecimalFormat;
+
 import database.databaseManager;
 public class MainActivity2 extends AppCompatActivity {
     private database.databaseManager databaseManager;
@@ -29,6 +31,7 @@ public class MainActivity2 extends AppCompatActivity {
         MaterialButton checkBtn3 = findViewById(R.id.checkbtn3);
         MaterialButton checkBtn4 = findViewById(R.id.checkbtn4);
         MaterialButton checkBtn5 = findViewById(R.id.checkbtn5);
+        MaterialButton checkBtn6 = findViewById(R.id.checkbtn6);
 
         databaseManager = new databaseManager();
         mAuth = FirebaseAuth.getInstance();
@@ -93,6 +96,13 @@ public class MainActivity2 extends AppCompatActivity {
                 startActivity(explicitIntent);
             }
         });
+
+        checkBtn6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                databaseManager.resetEatenCaloriesForUser();
+            }
+        });
     }
 
     private void updateCaloriesTextView(double calories) {
@@ -113,7 +123,36 @@ public class MainActivity2 extends AppCompatActivity {
         String eat4 = eat3.getText().toString();
         int totalCalories = Integer.parseInt(eat4);
         double remainingCalories = totalCalories - eatenCalories;
-        infoCalorie.setText("Remaining calories: " + (int) remainingCalories);
+        if(remainingCalories >= 0) {
+            infoCalorie.setText("Remaining calories: " + (int) remainingCalories);
+        }
+        if(remainingCalories <0){
+            infoCalorie.setText("Remaining calories: " + (int) remainingCalories + "\nSo you consumed more calories than you should. \nTo burn it you have to:" +
+                    "\n*Run for " + (int)running(remainingCalories) + " minutes" +
+                    "\n*Cycle for " + (int)cycling(remainingCalories) + " minutes" +
+                    "\n*Walk for " + (int)walking(remainingCalories) + " minutes" +
+                    "\nor perform any physical activity that you enjoy. \nRemember that you are doing it for yourself"
+            );
+        }
+
+    }
+
+    private double running(double calories){
+        double time;
+        time = (-1) * calories / 10.30;
+        return time;
+    }
+
+    private double cycling(double calories){
+        double time;
+        time = (-1) * calories / 7.5;
+        return time;
+    }
+
+    private double walking(double calories){
+        double time;
+        time = (-1) * calories / 5.0;
+        return time;
     }
 
     @Override
