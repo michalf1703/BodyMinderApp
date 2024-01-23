@@ -8,18 +8,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
 
+import database.databaseManager;
+
 public class FrittersActivity extends AppCompatActivity {
+    private database.databaseManager databaseManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fritters);
         MaterialButton checkBtn = findViewById(R.id.check1btn);
         int calories = getCalories();
+        databaseManager = new databaseManager();
 
         checkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showToast("You add calories: " + calories);
+                databaseManager.addUserEatenCaloriesData(calories);
             }
         });
     }

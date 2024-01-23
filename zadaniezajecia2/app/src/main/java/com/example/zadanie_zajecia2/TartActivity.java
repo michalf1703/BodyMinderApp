@@ -8,18 +8,22 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
 
+import database.databaseManager;
+
 public class TartActivity extends AppCompatActivity {
+    private database.databaseManager databaseManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tart);
         MaterialButton checkBtn = findViewById(R.id.check1btn);
-
+        databaseManager = new databaseManager();
         int calories = getCalories();
         checkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showToast("You add calories: " + calories);
+                databaseManager.addUserEatenCaloriesData(calories);
             }
         });
     }

@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseUser;
 import database.databaseManager;
 
 public class MainActivity2 extends AppCompatActivity {
-    private database.databaseManager databaseManager;
+    private database.databaseManager databaseManager,databaseManager2;
 
     private FirebaseAuth mAuth;
 
@@ -32,6 +32,7 @@ public class MainActivity2 extends AppCompatActivity {
 
 
         databaseManager = new databaseManager();
+        databaseManager2 = new databaseManager();
 
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
@@ -47,9 +48,19 @@ public class MainActivity2 extends AppCompatActivity {
             public void onCaloriesReceived(double calories) {
                 // Tutaj możesz obsłużyć otrzymane dane, na przykład wyświetlić w TextView
                 TextView caloriesTextView = findViewById(R.id.caloriesConsumedTextView);
-                caloriesTextView.setText("You consumed " + " of " + (int)calories + " calories today ");
+                caloriesTextView.setText("You consumed           " + " of " + (int)calories + " calories today ");
             }
         });
+        databaseManager.getEatenCaloriesForUser(new databaseManager.CaloriesCallback() {
+            @Override
+            public void onCaloriesReceived(double calories) {
+                // Tutaj możesz obsłużyć otrzymane dane, na przykład wyświetlić w TextView
+                TextView caloriesTextView = findViewById(R.id.caloriesConsumedTextView2);
+                caloriesTextView.setText((int)calories + "");
+            }
+        });
+
+
 
         checkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,4 +101,5 @@ public class MainActivity2 extends AppCompatActivity {
             }
         });
     }
+
 }

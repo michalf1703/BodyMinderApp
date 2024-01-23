@@ -58,6 +58,18 @@
         android:textSize="14sp"/>
 
     <TextView
+        android:id="@+id/caloriesConsumedTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/checkbtn4"
+        android:layout_marginStart="158dp"
+        android:layout_centerHorizontal="false"/>
+
+    <TextView
         android:id="@+id/caloriesConsumedTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

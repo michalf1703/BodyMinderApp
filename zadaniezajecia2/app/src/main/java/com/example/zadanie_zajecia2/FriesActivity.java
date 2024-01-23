@@ -8,12 +8,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
 
+import database.databaseManager;
+
 public class FriesActivity extends AppCompatActivity {
+    private database.databaseManager databaseManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fries);
         MaterialButton checkBtn = findViewById(R.id.check1btn);
+        databaseManager = new databaseManager();
 
         int calories = getCalories();
 
@@ -22,6 +26,7 @@ public class FriesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showToast("You add calories: " + calories);
+                databaseManager.addUserEatenCaloriesData(calories);
             }
         });
     }
