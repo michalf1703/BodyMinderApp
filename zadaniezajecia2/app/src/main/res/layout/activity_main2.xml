@@ -56,6 +56,17 @@
         android:backgroundTint="@color/design_default_color_secondary"
         android:text="MEALS"
         android:textSize="14sp"/>
+    <TextView
+        android:id="@+id/info1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You consumed "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/checkbtn4"
+        android:layout_marginStart="60dp"
+        android:layout_centerHorizontal="false"/>
 
     <TextView
         android:id="@+id/caloriesConsumedTextView2"
@@ -66,7 +77,18 @@
         android:textSize="16sp"
         android:layout_marginTop="20dp"
         android:layout_below="@id/checkbtn4"
-        android:layout_marginStart="158dp"
+        android:layout_marginStart="171dp"
+        android:layout_centerHorizontal="false"/>
+    <TextView
+        android:id="@+id/info2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="calories of "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/checkbtn4"
+        android:layout_marginStart="212dp"
         android:layout_centerHorizontal="false"/>
 
     <TextView
@@ -77,6 +99,17 @@
         android:textColor="@color/black"
         android:textSize="16sp"
         android:layout_marginTop="20dp"
+        android:layout_below="@id/checkbtn4"
+        android:layout_marginStart="292dp"
+        android:layout_centerHorizontal="false"/>
+    <TextView
+        android:id="@+id/caloriesConsumedTextView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="150dp"
         android:layout_below="@id/checkbtn4"
         android:layout_centerHorizontal="true"/>
 

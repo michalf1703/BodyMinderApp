@@ -22,19 +22,45 @@ public class databaseManager {
 
     public void addUserCaloriesData(double calculatedCalories) {
         if (user != null) {
-            db.collection("users")
-                    .document(user.getUid())
-                    .set(new User(user.getUid(), user.getEmail(), calculatedCalories, 0))
-                    .addOnSuccessListener(aVoid -> {
-                        System.out.println("Dane użytkownika zostały dodane pomyślnie.");
-                    })
-                    .addOnFailureListener(e -> {
-                        System.err.println("Błąd podczas dodawania danych użytkownika: " + e.getMessage());
+            DocumentReference userDocument = db.collection("users").document(user.getUid());
+
+            userDocument.get()
+                    .addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            DocumentSnapshot snapshot = task.getResult();
+
+                            if (snapshot.exists()) {
+                                userDocument.update("calories", calculatedCalories)
+                                        .addOnSuccessListener(aVoid -> {
+                                            System.out.println("Dane użytkownika zostały zaktualizowane pomyślnie.");
+                                        })
+                                        .addOnFailureListener(e -> {
+                                            System.err.println("Błąd podczas aktualizacji danych użytkownika: " + e.getMessage());
+                                        });
+                            } else {
+                                db.collection("users")
+                                        .document(user.getUid())
+                                        .set(new User(user.getUid(), user.getEmail(), calculatedCalories, 0))
+                                        .addOnSuccessListener(aVoid -> {
+                                            System.out.println("Dane użytkownika zostały dodane pomyślnie.");
+                                        })
+                                        .addOnFailureListener(e -> {
+                                            System.err.println("Błąd podczas dodawania danych użytkownika: " + e.getMessage());
+                                        });
+                            }
+                        } else {
+                            Exception exception = task.getException();
+                            if (exception != null) {
+                                exception.printStackTrace();
+                            }
+                            System.err.println("Błąd podczas pobierania danych użytkownika.");
+                        }
                     });
         } else {
             System.err.println("Użytkownik nie jest zalogowany.");
         }
     }
+
 
     public void addUserEatenCaloriesData(double eatenCalories) {
         if (user != null) {
@@ -107,8 +133,16 @@ public class databaseManager {
                             DocumentSnapshot document = task.getResult();
 
                             if (document != null && document.exists()) {
-                                double calories = document.getDouble("eat_calories");
-                                callback.onCaloriesReceived(calories);
+                                Double eatenCalories = document.getDouble("eat_calories");
+
+                                // Sprawdź, czy eatenCalories nie jest null przed użyciem metody doubleValue()
+                                if (eatenCalories != null) {
+                                    double calories = eatenCalories.doubleValue();
+                                    callback.onCaloriesReceived(calories);
+                                } else {
+                                    System.err.println("Pole eat_calories w dokumencie użytkownika jest null.");
+                                    callback.onCaloriesReceived(0); // Obsługa null - możesz ustawić wartość domyślną
+                                }
                             } else {
                                 System.err.println("Dokument użytkownika nie istnieje.");
                                 callback.onCaloriesReceived(0); // Zwracamy 0 w przypadku braku dokumentu
@@ -126,6 +160,7 @@ public class databaseManager {
             callback.onCaloriesReceived(0); // Zwracamy 0 w przypadku braku zalogowanego użytkownika
         }
     }
+
 
     // Dodaj metody nasłuchujące zmian w czasie rzeczywistym
     public void addCaloriesListener(CaloriesCallback callback) {

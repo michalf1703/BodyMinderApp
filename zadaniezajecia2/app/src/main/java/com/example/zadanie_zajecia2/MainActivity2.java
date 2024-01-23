@@ -12,10 +12,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import database.databaseManager;
-
 public class MainActivity2 extends AppCompatActivity {
     private database.databaseManager databaseManager;
     private FirebaseAuth mAuth;
+    private TextView infoCalorie;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,7 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         TextView userEmailTextView = findViewById(R.id.userEmailTextView);
+        infoCalorie = findViewById(R.id.caloriesConsumedTextView3);
         MaterialButton checkBtn = findViewById(R.id.checkbtn);
         MaterialButton checkBtn2 = findViewById(R.id.checkbtn2);
         MaterialButton checkBtn3 = findViewById(R.id.checkbtn3);
@@ -49,6 +50,7 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onCaloriesReceived(double calories) {
                 updateEatenCaloriesTextView(calories);
+                updateInfoCalorie();
             }
         });
 
@@ -95,12 +97,23 @@ public class MainActivity2 extends AppCompatActivity {
 
     private void updateCaloriesTextView(double calories) {
         TextView caloriesTextView = findViewById(R.id.caloriesConsumedTextView);
-        caloriesTextView.setText("You consumed           " + " of " + (int) calories + " calories today ");
+        caloriesTextView.setText((int) calories + "");
     }
 
     private void updateEatenCaloriesTextView(double calories) {
         TextView caloriesTextView = findViewById(R.id.caloriesConsumedTextView2);
         caloriesTextView.setText((int) calories + "");
+    }
+
+    private void updateInfoCalorie() {
+        TextView eat = findViewById(R.id.caloriesConsumedTextView2); // Zmień textViewId na rzeczywiste ID swojego TextView
+        String eat2 = eat.getText().toString();
+        int eatenCalories = Integer.parseInt(eat2);
+        TextView eat3 = findViewById(R.id.caloriesConsumedTextView);
+        String eat4 = eat3.getText().toString();
+        int totalCalories = Integer.parseInt(eat4);
+        double remainingCalories = totalCalories - eatenCalories;
+        infoCalorie.setText("Remaining calories: " + (int) remainingCalories);
     }
 
     @Override
@@ -118,6 +131,7 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onCaloriesReceived(double calories) {
                 updateEatenCaloriesTextView(calories);
+                updateInfoCalorie();
             }
         });
     }
