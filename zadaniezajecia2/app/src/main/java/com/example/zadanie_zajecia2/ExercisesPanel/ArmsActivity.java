@@ -1,9 +1,11 @@
-package com.example.zadanie_zajecia2;
+package com.example.zadanie_zajecia2.ExercisesPanel;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import androidx.annotation.NonNull;
+
+import com.example.zadanie_zajecia2.R;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;

@@ -1,4 +1,4 @@
-package com.example.zadanie_zajecia2;
+package com.example.zadanie_zajecia2.ExercisesPanel;
 
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.function.ObjIntConsumer;
 
-public class AbsActivity extends AppCompatActivity {
+public class ChestActivity extends AppCompatActivity {
 
     private YouTubePlayerView youTubePlayerView;
     private YouTubePlayer youTubePlayer;
@@ -22,8 +22,8 @@ public class AbsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.body);
-        youTubePlayerView = findViewById(R.id.youtubePlayerViewAbs);
+        setContentView(R.layout.chest);
+        youTubePlayerView = findViewById(R.id.youtubePlayerViewChest);
         getLifecycle().addObserver(youTubePlayerView);
 
 
@@ -38,30 +38,30 @@ public class AbsActivity extends AppCompatActivity {
         });
 
 
-        final Button lowerabsbtnWatchVideo1 = findViewById(R.id.lowerabsbtnWatchVideo1);
-        final Button upperabsbtnWatchVideo2 = findViewById(R.id.upperabsbtnWatchVideo2);
-        final Button obliquesabsbtnWatchVideo3 = findViewById(R.id.obliquesabsbtnWatchVideo3);
+        final Button lowerbtnWatchVideo1 = findViewById(R.id.lowerchestbtnWatchVideo1);
+        final Button middlebtnWatchVideo2 = findViewById(R.id.middlechestbtnWatchVideo2);
+        final Button upperbtnWatchVideo3 = findViewById(R.id.upperchestbtnWatchVideo3);
 
-        lowerabsbtnWatchVideo1.setOnClickListener(new View.OnClickListener() {
+        lowerbtnWatchVideo1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                currentVideoId="Kd8ZU9NUbRA";
+                currentVideoId="E7ZuFDpIBL8";
                 youTubePlayer.cueVideo(currentVideoId,0);
             }
         });
 
-        upperabsbtnWatchVideo2.setOnClickListener(new View.OnClickListener() {
+       middlebtnWatchVideo2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                currentVideoId="wtEFrO1eFW8";
+                currentVideoId="8zUEUBRd6b0";
                 youTubePlayer.cueVideo(currentVideoId,0);
             }
         });
 
-        obliquesabsbtnWatchVideo3.setOnClickListener(new View.OnClickListener() {
+        upperbtnWatchVideo3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                currentVideoId="Szel63xuAxc";
+                currentVideoId="YqFfh5IZUBs";
                 youTubePlayer.cueVideo(currentVideoId,0);
             }
         });

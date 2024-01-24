@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity4 extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
@@ -33,20 +33,20 @@ public class MainActivity4 extends AppCompatActivity {
                 String repeatPassword = repeatPasswordEditText.getText().toString();
 
                 if (!password.equals(repeatPassword)) {
-                    Toast.makeText(MainActivity4.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 mAuth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(MainActivity4.this, task -> {
+                        .addOnCompleteListener(RegisterActivity.this, task -> {
                             if (task.isSuccessful()) {
                                 // Registration success
-                                Toast.makeText(MainActivity4.this, "Registration successful", Toast.LENGTH_SHORT).show();
-                                Intent explicitIntent = new Intent(getApplicationContext(), MainActivity2.class);
+                                Toast.makeText(RegisterActivity.this, "Registration successful", Toast.LENGTH_SHORT).show();
+                                Intent explicitIntent = new Intent(getApplicationContext(), GeneralPanelActivity.class);
                                 startActivity(explicitIntent);
                             } else {
                                 // If registration fails, display a message to the user.
-                                Toast.makeText(MainActivity4.this, "Registration failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(RegisterActivity.this, "Registration failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         });
             }

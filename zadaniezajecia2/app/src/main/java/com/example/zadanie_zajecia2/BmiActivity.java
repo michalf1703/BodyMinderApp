@@ -11,7 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-public class MainActivity3 extends AppCompatActivity {
+public class BmiActivity extends AppCompatActivity {
 
     private CheckBox checkBox1, checkBox2;
     private EditText weightEditText, heightEditText;

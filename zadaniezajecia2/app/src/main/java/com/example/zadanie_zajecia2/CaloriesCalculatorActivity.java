@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import database.databaseManager;
 
-public class MainActivity6 extends AppCompatActivity {
+public class CaloriesCalculatorActivity extends AppCompatActivity {
 
     private Spinner weightGoalSpinner;
     private CheckBox checkBox1, checkBox2;

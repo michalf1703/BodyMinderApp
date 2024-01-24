@@ -1,9 +1,11 @@
-package com.example.zadanie_zajecia2;
+package com.example.zadanie_zajecia2.ExercisesPanel;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import androidx.annotation.NonNull;
+
+import com.example.zadanie_zajecia2.R;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
@@ -11,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.function.ObjIntConsumer;
 
-public class BackActivity extends AppCompatActivity {
+public class LegsActivity extends AppCompatActivity {
 
     private YouTubePlayerView youTubePlayerView;
     private YouTubePlayer youTubePlayer;
@@ -20,8 +22,8 @@ public class BackActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.back);
-        youTubePlayerView = findViewById(R.id.youtubePlayerViewBack);
+        setContentView(R.layout.legs);
+        youTubePlayerView = findViewById(R.id.youtubePlayerViewLegs);
         getLifecycle().addObserver(youTubePlayerView);
 
 
@@ -36,22 +38,30 @@ public class BackActivity extends AppCompatActivity {
         });
 
 
-        final Button latsbackbtnWatchVideo1 = findViewById(R.id.latsbackbtnWatchVideo1);
-        final Button trapsbackbtnWatchVideo2 = findViewById(R.id.trapsbackbtnWatchVideo2);
+        final Button quadslegsbtnWatchVideo1 = findViewById(R.id.quadslegsbtnWatchVideo1);
+        final Button hamstringslegsbtnWatchVideo2 = findViewById(R.id.hamstringslegsbtnWatchVideo2);
+        final Button calveslegsbtnWatchVideo3 = findViewById(R.id.calveslegsbtnWatchVideo3);
 
-
-        latsbackbtnWatchVideo1.setOnClickListener(new View.OnClickListener() {
+       quadslegsbtnWatchVideo1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                currentVideoId="O94yEoGXtBY";
+                currentVideoId="Ud9hEOxJMpQ";
                 youTubePlayer.cueVideo(currentVideoId,0);
             }
         });
 
-        trapsbackbtnWatchVideo2.setOnClickListener(new View.OnClickListener() {
+        hamstringslegsbtnWatchVideo2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                currentVideoId="kmGapunUkqQ";
+                currentVideoId="1jp2uhfO8M0";
+                youTubePlayer.cueVideo(currentVideoId,0);
+            }
+        });
+
+        calveslegsbtnWatchVideo3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                currentVideoId="FSPqzLv2HU4";
                 youTubePlayer.cueVideo(currentVideoId,0);
             }
         });
