@@ -7,14 +7,14 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.zadanie_zajecia2.ExercisesPanel.MainActivityGymExercises;
+import com.example.zadanie_zajecia2.MealsPanel.MealsPanel;
 import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import java.text.DecimalFormat;
-
 import database.databaseManager;
-public class MainActivity2 extends AppCompatActivity {
+public class GeneralPanelActivity extends AppCompatActivity {
     private database.databaseManager databaseManager;
     private FirebaseAuth mAuth;
     private TextView infoCalorie;
@@ -60,7 +60,7 @@ public class MainActivity2 extends AppCompatActivity {
         checkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent explicitIntent = new Intent(getApplicationContext(), MainActivity3.class);
+                Intent explicitIntent = new Intent(getApplicationContext(), BmiActivity.class);
                 startActivity(explicitIntent);
             }
         });
@@ -68,7 +68,7 @@ public class MainActivity2 extends AppCompatActivity {
         checkBtn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent explicitIntent = new Intent(getApplicationContext(), MainActivity6.class);
+                Intent explicitIntent = new Intent(getApplicationContext(), CaloriesCalculatorActivity.class);
                 startActivity(explicitIntent);
             }
         });

@@ -19,91 +19,91 @@
             android:name=".AddYourMealActivity"
             android:exported="false"/>
         <activity
-            android:name=".MuffinsActivity"
+            android:name=".MealsPanel.MuffinsActivity"
             android:exported="false"/>
         <activity
-            android:name=".FriesActivity"
+            android:name=".MealsPanel.FriesActivity"
             android:exported="false"/>
         <activity
-            android:name=".RollsActivity"
+            android:name=".MealsPanel.RollsActivity"
             android:exported="false"/>
         <activity
-            android:name=".SnacksActivity"
+            android:name=".MealsPanel.SnacksActivity"
             android:exported="false"/>
         <activity
-            android:name=".SalamonActivity"
+            android:name=".MealsPanel.SalamonActivity"
             android:exported="false"/>
         <activity
-            android:name=".FrittersActivity"
+            android:name=".MealsPanel.FrittersActivity"
             android:exported="false"/>
         <activity
-            android:name=".AToastActivity"
+            android:name=".MealsPanel.AToastActivity"
             android:exported="false"/>
         <activity
-            android:name=".LunchActivity"
+            android:name=".MealsPanel.LunchActivity"
             android:exported="false"/>
         <activity
-            android:name=".SpaghettiActivity"
+            android:name=".MealsPanel.SpaghettiActivity"
             android:exported="false"/>
         <activity
-            android:name=".TartActivity"
+            android:name=".MealsPanel.TartActivity"
             android:exported="false"/>
         <activity
-            android:name=".PancakesActivity"
+            android:name=".MealsPanel.PancakesActivity"
             android:exported="false"/>
         <activity
-            android:name=".DinnerActivity"
+            android:name=".MealsPanel.DinnerActivity"
             android:exported="false"/>
         <activity
-            android:name=".BakedEggActivity"
+            android:name=".MealsPanel.BakedEggActivity"
             android:exported="false"/>
         <activity
-            android:name=".SmoothieActivity"
+            android:name=".MealsPanel.SmoothieActivity"
             android:exported="false"/>
         <activity
-            android:name=".OmeletteActivity"
+            android:name=".MealsPanel.OmeletteActivity"
             android:exported="false"/>
         <activity
-            android:name=".BreakfastActivity"
+            android:name=".MealsPanel.BreakfastActivity"
             android:exported="false"/>
       <activity
-            android:name=".LegsActivity"
+            android:name=".ExercisesPanel.LegsActivity"
             android:exported="false"/>
         <activity
-            android:name=".BackActivity"
+            android:name=".ExercisesPanel.BackActivity"
             android:exported="false"/>
         <activity
-            android:name=".AbsActivity"
+            android:name=".ExercisesPanel.AbsActivity"
             android:exported="false"/>
         <activity
-            android:name=".ChestActivity"
+            android:name=".ExercisesPanel.ChestActivity"
             android:exported="false"/>
         <activity
-            android:name=".ArmsActivity"
+            android:name=".ExercisesPanel.ArmsActivity"
             android:exported="false"/>
         <activity
-            android:name=".MealsPanel"
+            android:name=".MealsPanel.MealsPanel"
             android:exported="false"/>
         <activity
-            android:name=".MainActivityGymExercises"
+            android:name=".ExercisesPanel.MainActivityGymExercises"
             android:exported="false"/>
         <activity
-            android:name=".MainActivity6"
+            android:name=".CaloriesCalculatorActivity"
             android:exported="false"/>
         <activity
-            android:name=".MainActivity5"
+            android:name=".ForgotPasswordActivity"
             android:exported="false"/>
         <activity
-            android:name=".MainActivity4"
+            android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity3"
+            android:name=".BmiActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".GeneralPanelActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

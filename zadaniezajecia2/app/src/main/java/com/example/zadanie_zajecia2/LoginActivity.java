@@ -1,15 +1,17 @@
 package com.example.zadanie_zajecia2;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
@@ -33,15 +35,15 @@ public class MainActivity extends AppCompatActivity {
                 String userPassword = password.getText().toString();
 
                 mAuth.signInWithEmailAndPassword(userEmail, userPassword)
-                        .addOnCompleteListener(MainActivity.this, task -> {
+                        .addOnCompleteListener(LoginActivity.this, task -> {
                             if (task.isSuccessful()) {
                                 // Sign in success
-                                Toast.makeText(MainActivity.this, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
-                                Intent explicitIntent = new Intent(getApplicationContext(), MainActivity2.class);
+                                Toast.makeText(LoginActivity.this, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
+                                Intent explicitIntent = new Intent(getApplicationContext(), GeneralPanelActivity.class);
                                 startActivity(explicitIntent);
                             } else {
                                 // If sign in fails, display a message to the user.
-                                Toast.makeText(MainActivity.this, "LOGIN FAILED !!!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, "LOGIN FAILED !!!", Toast.LENGTH_SHORT).show();
                             }
                         });
             }
@@ -50,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         registerbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent explicitIntent = new Intent(getApplicationContext(), MainActivity4.class);
+                Intent explicitIntent = new Intent(getApplicationContext(), RegisterActivity.class);
                 startActivity(explicitIntent);
             }
         });
@@ -58,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         restartbnt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent explicitIntent = new Intent(getApplicationContext(), MainActivity5.class);
+                Intent explicitIntent = new Intent(getApplicationContext(), ForgotPasswordActivity.class);
                 startActivity(explicitIntent);
             }
         });

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/s_sandwich"
-    tools:context=".SalamonActivity">
+    tools:context=".MealsPanel.SalamonActivity">
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/check1btn"

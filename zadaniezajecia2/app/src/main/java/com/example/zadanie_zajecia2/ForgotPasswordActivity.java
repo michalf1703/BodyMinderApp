@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity5 extends AppCompatActivity {
+public class ForgotPasswordActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
@@ -29,9 +29,9 @@ public class MainActivity5 extends AppCompatActivity {
                 mAuth.sendPasswordResetEmail(email)
                         .addOnCompleteListener(task -> {
                             if (task.isSuccessful()) {
-                                Toast.makeText(MainActivity5.this, "Password reset email sent", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(ForgotPasswordActivity.this, "Password reset email sent", Toast.LENGTH_SHORT).show();
                             } else {
-                                Toast.makeText(MainActivity5.this, "Failed to send password reset email: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(ForgotPasswordActivity.this, "Failed to send password reset email: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         });
             }

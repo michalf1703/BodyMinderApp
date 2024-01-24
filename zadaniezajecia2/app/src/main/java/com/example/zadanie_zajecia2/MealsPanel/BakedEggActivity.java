@@ -1,4 +1,4 @@
-package com.example.zadanie_zajecia2;
+package com.example.zadanie_zajecia2.MealsPanel;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,6 +6,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.zadanie_zajecia2.R;
 import com.google.android.material.button.MaterialButton;
 
 import database.databaseManager;

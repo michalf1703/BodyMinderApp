@@ -1,9 +1,11 @@
-package com.example.zadanie_zajecia2;
+package com.example.zadanie_zajecia2.ExercisesPanel;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import androidx.annotation.NonNull;
+
+import com.example.zadanie_zajecia2.R;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
@@ -11,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.function.ObjIntConsumer;
 
-public class BackActivity extends AppCompatActivity {
+public class ChestActivity extends AppCompatActivity {
 
     private YouTubePlayerView youTubePlayerView;
     private YouTubePlayer youTubePlayer;
@@ -20,8 +22,8 @@ public class BackActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.back);
-        youTubePlayerView = findViewById(R.id.youtubePlayerViewBack);
+        setContentView(R.layout.chest);
+        youTubePlayerView = findViewById(R.id.youtubePlayerViewChest);
         getLifecycle().addObserver(youTubePlayerView);
 
 
@@ -36,22 +38,30 @@ public class BackActivity extends AppCompatActivity {
         });
 
 
-        final Button latsbackbtnWatchVideo1 = findViewById(R.id.latsbackbtnWatchVideo1);
-        final Button trapsbackbtnWatchVideo2 = findViewById(R.id.trapsbackbtnWatchVideo2);
+        final Button lowerbtnWatchVideo1 = findViewById(R.id.lowerchestbtnWatchVideo1);
+        final Button middlebtnWatchVideo2 = findViewById(R.id.middlechestbtnWatchVideo2);
+        final Button upperbtnWatchVideo3 = findViewById(R.id.upperchestbtnWatchVideo3);
 
-
-        latsbackbtnWatchVideo1.setOnClickListener(new View.OnClickListener() {
+        lowerbtnWatchVideo1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                currentVideoId="O94yEoGXtBY";
+                currentVideoId="E7ZuFDpIBL8";
                 youTubePlayer.cueVideo(currentVideoId,0);
             }
         });
 
-        trapsbackbtnWatchVideo2.setOnClickListener(new View.OnClickListener() {
+       middlebtnWatchVideo2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                currentVideoId="kmGapunUkqQ";
+                currentVideoId="8zUEUBRd6b0";
+                youTubePlayer.cueVideo(currentVideoId,0);
+            }
+        });
+
+        upperbtnWatchVideo3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                currentVideoId="YqFfh5IZUBs";
                 youTubePlayer.cueVideo(currentVideoId,0);
             }
         });

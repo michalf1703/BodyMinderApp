@@ -1,4 +1,4 @@
-package com.example.zadanie_zajecia2;
+package com.example.zadanie_zajecia2.MealsPanel;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,19 +6,22 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.zadanie_zajecia2.R;
 import com.google.android.material.button.MaterialButton;
 
 import database.databaseManager;
 
-public class TartActivity extends AppCompatActivity {
+public class SalamonActivity extends AppCompatActivity {
     private database.databaseManager databaseManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tart);
+        setContentView(R.layout.salamon);
         MaterialButton checkBtn = findViewById(R.id.check1btn);
         databaseManager = new databaseManager();
         int calories = getCalories();
+
+
         checkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,7 +32,7 @@ public class TartActivity extends AppCompatActivity {
     }
 
     private int getCalories() {
-        return 1160;
+        return 361;
     }
 
     private void showToast(String message) {

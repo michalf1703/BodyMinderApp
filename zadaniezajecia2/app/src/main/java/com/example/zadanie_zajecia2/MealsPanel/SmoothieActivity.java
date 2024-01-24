@@ -1,4 +1,4 @@
-package com.example.zadanie_zajecia2;
+package com.example.zadanie_zajecia2.MealsPanel;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,16 +6,17 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.zadanie_zajecia2.R;
 import com.google.android.material.button.MaterialButton;
 
 import database.databaseManager;
 
-public class PancakesActivity extends AppCompatActivity {
+public class SmoothieActivity extends AppCompatActivity {
     private database.databaseManager databaseManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pancakes);
+        setContentView(R.layout.smoothie);
         MaterialButton checkBtn = findViewById(R.id.check1btn);
         databaseManager = new databaseManager();
         int calories = getCalories();
@@ -31,7 +32,7 @@ public class PancakesActivity extends AppCompatActivity {
     }
 
     private int getCalories() {
-        return 860;
+        return 320;
     }
 
     private void showToast(String message) {
