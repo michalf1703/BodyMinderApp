@@ -12,7 +12,7 @@
         android:layout_width="250dp"
         android:layout_height="48dp"
         android:layout_marginStart="130dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="90dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="100dp"
         android:gravity="left"
@@ -25,7 +25,7 @@
         android:layout_width="160dp"
         android:layout_height="48dp"
         android:layout_marginStart="230dp"
-        android:layout_marginTop="122dp"
+        android:layout_marginTop="82dp"
         android:layout_marginEnd="60dp"
         android:layout_marginBottom="60dp"
         android:text="Female"
@@ -37,7 +37,7 @@
         android:layout_width="100dp"
         android:layout_height="48dp"
         android:layout_marginStart="170dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="190dp"
         android:background="#FAE4C4"
         android:drawablePadding="20dp"
         android:hint="  weight"
@@ -51,7 +51,7 @@
         android:layout_width="100dp"
         android:layout_height="48dp"
         android:layout_marginStart="170dp"
-        android:layout_marginTop="380dp"
+        android:layout_marginTop="290dp"
         android:background="#FAE4C4"
         android:drawablePadding="20dp"
         android:hint="  height"
@@ -64,8 +64,8 @@
         android:id="@+id/agePicker"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="466dp"
-        android:layout_marginStart="180dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginStart="160dp"
         android:layout_gravity="center_horizontal"
         android:contentDescription="NumberPicker for selecting age" />
 
@@ -75,7 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/agePicker"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="0dp"
         android:entries="@array/activity_levels"
         android:minHeight="48dp"
         android:contentDescription="Spinner for selecting activity level" />
@@ -86,10 +86,20 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/activityLevelSpinner"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="0dp"
         android:contentDescription="RadioGroup for selecting activity level options">
 
     </RadioGroup>
+    <Spinner
+        android:id="@+id/weightGoalSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calculateButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-150dp"
+        android:entries="@array/weight_goals"
+        android:minHeight="48dp"
+        android:contentDescription="Spinner for selecting weight goal" />
 
     <Button
         android:id="@+id/calculateButton"
@@ -97,7 +107,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/activityLevelRadioGroup"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="185dp"
         android:text="Calculate"
         android:contentDescription="Button for initiating BMI calculation" />
 

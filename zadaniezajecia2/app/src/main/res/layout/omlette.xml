@@ -15,7 +15,20 @@
         android:layout_marginTop="560dp"
         android:backgroundTint="@color/design_default_color_secondary"
         android:text="ADD TO YOUR CALORIC"
-        android:contentDescription="Button to add Omlette With Vegetables to your caloric intake" />/>
+        android:contentDescription="Button to add Omlette With Vegetables to your caloric intake.
+        Ingredients:
+        egg (2 pieces)
+cherry tomatoes (80g)
+3 small mushrooms (60g)
+olive oil (5g)
+pepper and salt to taste
+chives (10g)
+Preparation:
+Cut the tomatoes into small cubes. Wash and cut the mushrooms into thin slices and chop the chives. Stew all vegetables in a pan for about 5 minutes and then cool.
+Beat the eggs with a mixer, season with salt and pepper, add the previously prepared vegetables. Mix everything.
+Heat the olive oil in a pan and fry the omelette on both sides. Transfer to a plate.
+Preparation time: 10 min
+" />/>
 
 
 

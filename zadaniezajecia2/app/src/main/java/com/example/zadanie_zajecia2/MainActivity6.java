@@ -15,6 +15,7 @@ import database.databaseManager;
 
 public class MainActivity6 extends AppCompatActivity {
 
+    private Spinner weightGoalSpinner;
     private CheckBox checkBox1, checkBox2;
     private EditText weightEditText, heightEditText;
     private NumberPicker agePicker;
@@ -35,7 +36,7 @@ public class MainActivity6 extends AppCompatActivity {
         agePicker = findViewById(R.id.agePicker);
         activityLevelSpinner = findViewById(R.id.activityLevelSpinner);
         calculateButton = findViewById(R.id.calculateButton);
-
+        weightGoalSpinner = findViewById(R.id.weightGoalSpinner);
         agePicker.setMinValue(1);
         agePicker.setMaxValue(100);
         agePicker.setValue(18);
@@ -65,6 +66,19 @@ public class MainActivity6 extends AppCompatActivity {
         }
 
         double totalCalories = bmr * activityFactor;
+        String selectedWeightGoal = weightGoalSpinner.getSelectedItem().toString();
+        switch (selectedWeightGoal) {
+            case "Lose Weight":
+                totalCalories -= 400;
+                break;
+            case "Maintain Weight":
+                break;
+            case "Gain Weight":
+                totalCalories += 400;
+                break;
+            default:
+                break;
+        }
 
         String resultMessage = "Total Calories: " + totalCalories;
         Toast.makeText(this, resultMessage, Toast.LENGTH_SHORT).show();

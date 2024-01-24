@@ -31,7 +31,7 @@
         android:layout_margin="10dp"
         android:padding="20dp"
         android:drawablePadding="20dp"
-        android:contentDescription="Email input"/>
+        android:contentDescription="Enter your email"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -46,7 +46,7 @@
         android:padding="20dp"
         android:drawablePadding="20dp"
         android:inputType="textPassword"
-        android:contentDescription="Password input"/>
+        android:contentDescription="Enter your password"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/loginbtn"
