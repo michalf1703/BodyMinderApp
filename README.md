@@ -62,6 +62,13 @@ Make sure you have the following installed on your machine:
 #### Feature 7: Counting calories eaten & suggested physical activity
 - If the user exceeds his calorie limit, information will be displayed about possible physical activities that will help burn this caloric surplus.
 
-## License
+## Login & Register & Restart password
+![sign_in](https://github.com/michalf1703/BodyMinderApp/assets/126731293/7949304f-6ab1-4aad-b747-5d7b925033b2)
+## Main Panel & BMI & Caloric calculation & Add meal panel
+![mainPanel](https://github.com/michalf1703/BodyMinderApp/assets/126731293/2c5b461a-65b5-4770-acaf-6ac1b6ca653f)
+## Meals Panel & Meal example
+![posilki_panel](https://github.com/michalf1703/BodyMinderApp/assets/126731293/566f4aa2-3506-4871-999d-9f099c09c1b8)
+## Exercises Panel & Exercise example
+![cwiczenia_panel](https://github.com/michalf1703/BodyMinderApp/assets/126731293/81376f4a-2905-4784-aebd-ffb0dfd496ab)
 
-This project is licensed under the [Apache License 2.0](LICENSE).
+
